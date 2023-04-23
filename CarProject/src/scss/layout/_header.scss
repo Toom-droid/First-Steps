@@ -1,0 +1,144 @@
+.header{
+    background-image: url(../../../build/img/Fondo2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 90vh;
+    width: 100%;
+    box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.582);
+    
+    animation: animate 18s infinite ease-in-out;
+}
+
+@keyframes animate {
+    25%{
+        background-image: url(../../../build/img/Fondo5.jpg);
+        background-size: cover;
+    }
+    50%{
+        background-image: url(../../../build/img/Fondo4.jpg);
+        background-size: cover;
+    }
+    75%{
+        background-image: url(../../../build/img/Fondo3.jpg);
+        background-size: cover;
+    }
+    100%{
+        background-image: url(../../../build/img/Fondo2.jpg);
+        background-size: cover;
+    }
+}
+
+.navegaciones{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    transition: all .5s;
+    &:hover{
+        background-color: $blanco;
+        .navegacion{
+            a{
+                color: $negro;
+            }
+        }
+    }
+
+}
+.navegacion{
+    display: flex;
+    height: 28rem;
+    padding: 1rem;
+    gap: 2rem;
+    flex-direction: column;
+    @include tablet{
+        display: flex;
+        height: 7rem;
+        flex-direction: row;
+
+    }
+    .enlaces{
+        padding: 1rem;
+        text-decoration: none;
+        color: $blanco;
+        height: 3.5rem;
+        transition: all .3s;
+        border-bottom: 1px solid rgba(255, 255, 255, 0);
+        &:hover{
+            color: $negro;
+            border-bottom: 1px solid $negro;
+        }
+    }
+}
+.logs-enlaces{
+    text-decoration: none;
+    color: $blanco;
+    padding: 1.5rem;
+    transition: all .3s;
+    height: 5rem;
+    &.registro{
+        border-radius: 1rem;
+        background-color: $naranja;
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all .5s;
+        border-bottom: none;
+        box-shadow: 1px 2px 3px darken($naranja, 30);
+        @include desktop{
+            padding: 2.5rem;
+        }
+        &:hover{
+            border-bottom: none;
+            background-color: darken($naranja, 5);
+        }
+    }
+    &.inicio{
+        color: darken($blanco,5);
+        border-radius: 1rem;
+        background-color: darken($blanco,15);
+        box-shadow: 1px 2px 3px darken($blanco, 30);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:hover{
+            background-color: darken($blanco,20);
+        }
+    }
+}
+
+.contenedor-textos{
+    margin-top: 20rem;
+    @include tablet{
+        margin-top: 50rem;
+    }
+    h4{
+        margin: 1rem;
+        font-size: 2.5rem;
+        color: $blanco;
+        z-index: 400;
+    }
+    h1{
+        color: $negro;
+        margin: 0rem;
+        padding: .5rem;
+        font-size: 7rem;
+        font-weight: bold;
+        background-color: $snow;
+        display: inline-block;
+        border-radius: 1rem;
+        box-shadow: 1px 2px 3px darken($negro, 30);
+        span{
+            color: $naranja;
+        }
+    }
+    p{
+        font-size: 3rem;
+        margin: 1rem;
+        color: $blanco;
+    }
+}
+.bg{
+    backdrop-filter: brightness(75%);
+    height: 100%;
+}

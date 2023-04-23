@@ -1,0 +1,42 @@
+.titulo-servicios{
+    margin: 3rem auto;
+    display: flex;
+    justify-content: center;
+}
+.servicios{
+    width: 95%;
+    margin: 0 auto;
+    @include tablet{
+        padding: 2rem;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        place-content: center;
+        place-items: center;
+        column-gap: 5rem;
+        width: 100%;
+    }
+    .servicio{
+        margin: 5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        @include tablet{
+            margin: 0;
+        }
+    }
+    .servicio p{
+        font-size: 1.5rem;
+        margin: 1rem 0;
+        text-align: center;
+    }
+    .servicio img{
+        width: 10rem;
+    }
+    .servicio h2{
+        color: $naranja;
+        margin: 1rem;
+        font-size: 2.5rem;
+        text-align: center;
+    }
+}

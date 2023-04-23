@@ -1,0 +1,61 @@
+.footer{
+    padding: 1rem;
+    box-shadow: 1px 2px 7px $negro;
+    display: grid;
+    column-gap: 5rem;
+    row-gap: 3rem;
+    @include desktop{
+        grid-template-columns: repeat(4,1fr);
+    }
+    .desc{
+        color: rgba(0, 0, 0, 0.678);
+    }
+    .oldride{
+        h1{
+            font-weight: 900;
+            letter-spacing: 1px;
+            span{
+                letter-spacing: 1px;
+                font-weight: 400;
+            }
+        }
+        img{
+            width: 5rem;
+        }
+        .mail,
+        .telefono{
+            display: flex;
+        }
+    }
+    .contacto{
+        display: flex;
+        flex-direction: column;
+        input{
+            padding: 2rem;
+            border: none;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        a{
+            text-align: center;
+            width: 100%;
+            transition: all 1s;
+            transition: background-color .7s;
+            border: none;
+            margin: .5rem .5rem;
+            padding: 2rem;
+            color: $blanco;
+            text-decoration: none;
+            background-color: $rojo;
+            font-weight: 900;
+            letter-spacing: 1px;
+            font-size: 2rem;
+            border-radius: 1.5rem;
+            &:hover{
+                cursor: pointer;
+                background-color: $rojo;
+                color: $blanco;
+            }
+        }
+    }
+}

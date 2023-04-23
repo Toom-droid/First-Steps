@@ -1,0 +1,109 @@
+.vehiculos-titulo{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 15rem;
+    p{
+        color: rgba(0, 0, 0, 0.658);
+    }
+}
+.vehiculos{
+    display: grid;
+    gap: 5rem;
+    padding: 2rem;
+    place-content: center;
+    place-items: center;
+    @include tablet{
+        grid-template-columns: 1fr 2fr 1fr;
+    }
+    .modelos{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        @include tablet{
+            display: flex;
+            flex-direction: column;
+        }
+        button{
+            transition: all 1s;
+            transition: background-color .7s;
+            border: none;
+            margin: .5rem .5rem;
+            padding: .5rem;
+            color: $negro;
+            text-decoration: none;
+            background-color: $snow;
+            font-weight: 900;
+            letter-spacing: 1px;
+            font-size: 2rem;
+            border-radius: 1.5rem;
+            @include tablet{
+                padding: 2rem;
+                margin: .5rem 0;
+            }
+            &:hover{
+                cursor: pointer;
+                background-color: $rojo;
+                color: $blanco;
+            }
+        }
+        button.activo{
+            transition: all 1s;
+            background-color: $rojo;
+            color: $blanco;
+        }
+    }
+}
+.imagen{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include desktop{
+        img{
+            width: 70%;
+        }
+    }
+}
+
+.caracteristicas{
+    width: 90%;
+    @include telefono{
+        width: 85%;
+    }
+    @include tablet{
+        width: auto;
+    }
+    .titulo{
+        background-color: $rojo;
+        text-align: center;
+        color: $blanco;
+        padding: .2rem 0 .5rem 0;
+        h1{
+            font-weight: 900;
+            font-size: 2.5rem;
+        }
+    }
+    .listas{
+        border-radius: 1rem;
+        display: flex;
+    }
+    ul{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        @include tablet{
+            width: auto;
+        }
+        li{
+            width: 100%;
+            font-weight: 700;
+            border: 1px solid rgba(0, 0, 0, 0.459);
+            padding: 3rem;
+            @include tablet{
+                width: auto;
+            }
+        }
+    }
+}
